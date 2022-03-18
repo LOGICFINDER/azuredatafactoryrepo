@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "Copy Data2",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -20,6 +20,8 @@
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
 							"recursive": true,
+							"wildcardFolderPath": "csv-sample-data",
+							"wildcardFileName": "*",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -49,13 +51,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DstAdlDataSet",
+						"referenceName": "SrcAdlDataSet",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "SrcAdlDataSet",
+						"referenceName": "DstAdlDataSet",
 						"type": "DatasetReference"
 					}
 				]
